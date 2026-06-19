@@ -1,0 +1,20 @@
+{
+  "name": "Roleplay Hub",
+  "short_name": "RP Hub",
+  "description": "A mobile-friendly roleplay chat hub.",
+  "lang": "zh-CN",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f8fafc",
+  "theme_color": "#eff6ff",
+  "icons": [
+    {
+      "src": "./assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
