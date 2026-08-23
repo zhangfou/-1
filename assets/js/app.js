@@ -3347,7 +3347,13 @@ const app = createApp({
             const baseUrl = String(settings.apiUrl || '').trim().replace(/\/+$/, '');
             const apiUrl = baseUrl.toLowerCase().endsWith('/v1') ? baseUrl : `${baseUrl}/v1`;
             const target = `${apiUrl}/${String(path || '').replace(/^\/+/, '')}`;
-            const proxy = String(settings.apiProxy || '').trim();
+            const configuredProxy = String(settings.apiProxy || '').trim();
+            const localProxy = !configuredProxy
+                && window.location.protocol === 'http:'
+                && window.location.port === '8000'
+                ? `${window.location.origin}/proxy?url=`
+                : '';
+            const proxy = configuredProxy || localProxy;
             return proxy ? `${proxy}${encodeURIComponent(target)}` : target;
         };
 

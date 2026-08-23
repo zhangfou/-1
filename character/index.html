@@ -1797,7 +1797,13 @@
                 };
                 const buildWorkshopUrl = () => {
                     const target = `${getApiBaseUrl()}/chat/completions`;
-                    const proxy = String(api.proxy || '').trim();
+                    const configuredProxy = String(api.proxy || '').trim();
+                    const localProxy = !configuredProxy
+                        && window.location.protocol === 'http:'
+                        && window.location.port === '8000'
+                        ? `${window.location.origin}/proxy?url=`
+                        : '';
+                    const proxy = configuredProxy || localProxy;
                     return proxy ? `${proxy}${encodeURIComponent(target)}` : target;
                 };
                 const requestWorkshopCompletion = (messages, { stream, temperature }) => {

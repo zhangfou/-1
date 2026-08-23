@@ -1,4 +1,4 @@
-const RP_HUB_CACHE = 'rp-hub-shell-v3';
+const RP_HUB_CACHE = 'rp-hub-shell-v4';
 
 const LOCAL_ASSETS = [
   './',
