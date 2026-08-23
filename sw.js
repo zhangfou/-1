@@ -1,18 +1,22 @@
-const RP_HUB_CACHE = 'rp-hub-shell-v2';
+const RP_HUB_CACHE = 'rp-hub-shell-v3';
 
 const LOCAL_ASSETS = [
   './',
   './index.html',
   './manifest.webmanifest',
   './assets/css/styles.css',
-  './assets/js/utils.js',
-  './assets/js/card-utils.js',
-  './assets/js/ui-select.js',
+  './assets/js/built-in-content.js',
+  './assets/js/core-utils.js',
+  './assets/js/data-services.js',
+  './assets/js/runtime-services.js',
+  './assets/js/update-check.js',
+  './assets/js/ui-components.js',
   './assets/js/app.js',
   './assets/vendor/vue.global.prod.js',
   './assets/vendor/marked.min.js',
   './assets/vendor/purify.min.js',
   './assets/vendor/Sortable.min.js',
+  './assets/vendor/localforage.min.js',
   './assets/icons/icon.svg'
 ];
 
